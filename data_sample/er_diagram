@@ -1,0 +1,183 @@
+// ER Diagram
+digraph {
+	actual_budget_details [label=actual_budget_details]
+	actual_budgets [label=actual_budgets]
+	actual_budget_details:actual_budget_id -> actual_budgets:id [label="actual_budget_id -> id"]
+	actual_budget_details [label=actual_budget_details]
+	expenditures [label=expenditures]
+	actual_budget_details:expenditure_id -> expenditures:id [label="expenditure_id -> id"]
+	actual_budget_details [label=actual_budget_details]
+	revenues [label=revenues]
+	actual_budget_details:revenue_id -> revenues:id [label="revenue_id -> id"]
+	actual_budgets [label=actual_budgets]
+	local_authorities [label=local_authorities]
+	actual_budgets:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	annual_budget_details [label=annual_budget_details]
+	annual_budgets [label=annual_budgets]
+	annual_budget_details:annual_budget_id -> annual_budgets:id [label="annual_budget_id -> id"]
+	annual_budget_details [label=annual_budget_details]
+	expenditures [label=expenditures]
+	annual_budget_details:expenditure_id -> expenditures:id [label="expenditure_id -> id"]
+	annual_budget_details [label=annual_budget_details]
+	revenues [label=revenues]
+	annual_budget_details:revenue_id -> revenues:id [label="revenue_id -> id"]
+	annual_budgets [label=annual_budgets]
+	local_authorities [label=local_authorities]
+	annual_budgets:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	districts [label=districts]
+	provinces [label=provinces]
+	districts:province_id -> provinces:id [label="province_id -> id"]
+	gnds [label=gnds]
+	local_authorities [label=local_authorities]
+	gnds:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authorities [label=local_authorities]
+	districts [label=districts]
+	local_authorities:district_id -> districts:id [label="district_id -> id"]
+	local_authority_budget_types [label=local_authority_budget_types]
+	local_authorities [label=local_authorities]
+	local_authority_budget_types:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authority_data_locks [label=local_authority_data_locks]
+	local_authorities [label=local_authorities]
+	local_authority_data_locks:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authority_data_locks [label=local_authority_data_locks]
+	users [label=users]
+	local_authority_data_locks:locked_by_user_id -> users:id [label="locked_by_user_id -> id"]
+	local_authority_data_locks [label=local_authority_data_locks]
+	users [label=users]
+	local_authority_data_locks:unlocked_by_user_id -> users:id [label="unlocked_by_user_id -> id"]
+	local_authority_data_verifications [label=local_authority_data_verifications]
+	local_authorities [label=local_authorities]
+	local_authority_data_verifications:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authority_data_verifications [label=local_authority_data_verifications]
+	users [label=users]
+	local_authority_data_verifications:verified_by -> users:id [label="verified_by -> id"]
+	local_authority_downloads [label=local_authority_downloads]
+	local_authorities [label=local_authorities]
+	local_authority_downloads:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authority_information [label=local_authority_information]
+	local_authorities [label=local_authorities]
+	local_authority_information:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authority_information [label=local_authority_information]
+	questions [label=questions]
+	local_authority_information:question_id -> questions:id [label="question_id -> id"]
+	local_authority_programs [label=local_authority_programs]
+	local_authorities [label=local_authorities]
+	local_authority_programs:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authority_programs [label=local_authority_programs]
+	program_types [label=program_types]
+	local_authority_programs:program_type_id -> program_types:id [label="program_type_id -> id"]
+	local_authority_staff [label=local_authority_staff]
+	local_authorities [label=local_authorities]
+	local_authority_staff:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authority_staff [label=local_authority_staff]
+	staff_types [label=staff_types]
+	local_authority_staff:staff_type_id -> staff_types:id [label="staff_type_id -> id"]
+	local_authority_vehicles [label=local_authority_vehicles]
+	local_authorities [label=local_authorities]
+	local_authority_vehicles:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	local_authority_vehicles [label=local_authority_vehicles]
+	vehicle_types [label=vehicle_types]
+	local_authority_vehicles:vehicle_type_id -> vehicle_types:id [label="vehicle_type_id -> id"]
+	model_has_permissions [label=model_has_permissions]
+	permissions [label=permissions]
+	model_has_permissions:permission_id -> permissions:id [label="permission_id -> id"]
+	model_has_roles [label=model_has_roles]
+	roles [label=roles]
+	model_has_roles:role_id -> roles:id [label="role_id -> id"]
+	question_options [label=question_options]
+	questions [label=questions]
+	question_options:question_id -> questions:id [label="question_id -> id"]
+	role_has_permissions [label=role_has_permissions]
+	permissions [label=permissions]
+	role_has_permissions:permission_id -> permissions:id [label="permission_id -> id"]
+	role_has_permissions [label=role_has_permissions]
+	roles [label=roles]
+	role_has_permissions:role_id -> roles:id [label="role_id -> id"]
+	user_district [label=user_district]
+	districts [label=districts]
+	user_district:district_id -> districts:id [label="district_id -> id"]
+	user_district [label=user_district]
+	users [label=users]
+	user_district:user_id -> users:id [label="user_id -> id"]
+	user_local_authority [label=user_local_authority]
+	local_authorities [label=local_authorities]
+	user_local_authority:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	user_local_authority [label=user_local_authority]
+	users [label=users]
+	user_local_authority:user_id -> users:id [label="user_id -> id"]
+	user_province [label=user_province]
+	provinces [label=provinces]
+	user_province:province_id -> provinces:id [label="province_id -> id"]
+	user_province [label=user_province]
+	users [label=users]
+	user_province:user_id -> users:id [label="user_id -> id"]
+	wards [label=wards]
+	local_authorities [label=local_authorities]
+	wards:local_authority_id -> local_authorities:id [label="local_authority_id -> id"]
+	provinces
+	provinces [label=provinces]
+	local_authority_data_locks
+	local_authority_data_locks [label=local_authority_data_locks]
+	local_authority_downloads
+	local_authority_downloads [label=local_authority_downloads]
+	questions
+	questions [label=questions]
+	staff_types
+	staff_types [label=staff_types]
+	annual_budget_details
+	annual_budget_details [label=annual_budget_details]
+	revenues
+	revenues [label=revenues]
+	districts
+	districts [label=districts]
+	vehicle_types
+	vehicle_types [label=vehicle_types]
+	user_province
+	user_province [label=user_province]
+	local_authority_data_verifications
+	local_authority_data_verifications [label=local_authority_data_verifications]
+	user_district
+	user_district [label=user_district]
+	user_local_authority
+	user_local_authority [label=user_local_authority]
+	roles
+	roles [label=roles]
+	annual_budgets
+	annual_budgets [label=annual_budgets]
+	wards
+	wards [label=wards]
+	local_authority_vehicles
+	local_authority_vehicles [label=local_authority_vehicles]
+	local_authority_staff
+	local_authority_staff [label=local_authority_staff]
+	local_authorities
+	local_authorities [label=local_authorities]
+	model_has_roles
+	model_has_roles [label=model_has_roles]
+	model_has_permissions
+	model_has_permissions [label=model_has_permissions]
+	local_authority_information
+	local_authority_information [label=local_authority_information]
+	actual_budget_details
+	actual_budget_details [label=actual_budget_details]
+	permissions
+	permissions [label=permissions]
+	local_authority_budget_types
+	local_authority_budget_types [label=local_authority_budget_types]
+	expenditures
+	expenditures [label=expenditures]
+	program_types
+	program_types [label=program_types]
+	users
+	users [label=users]
+	question_options
+	question_options [label=question_options]
+	local_authority_programs
+	local_authority_programs [label=local_authority_programs]
+	role_has_permissions
+	role_has_permissions [label=role_has_permissions]
+	actual_budgets
+	actual_budgets [label=actual_budgets]
+	gnds
+	gnds [label=gnds]
+}
